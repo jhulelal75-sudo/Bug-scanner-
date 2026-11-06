@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
         input.setTextColor(white);
         input.setHintTextColor(muted);
         input.setHint("Enter domain e.g. example.com");
-        input.setTextSize(16);
+        input.setTextSize(10);
         input.setGravity(Gravity.CENTER_VERTICAL);
         input.setMinHeight(dp(60));
         input.setIncludeFontPadding(true);
@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
         scan = new Button(this);
         scan.setText("START FULL SECURITY SCAN");
         scan.setTextColor(bg);
-        scan.setTextSize(15);
+        scan.setTextSize(10);
         scan.setAllCaps(false);
         scan.setMinHeight(dp(58));
         scan.setGravity(Gravity.CENTER);
@@ -150,6 +150,7 @@ public class MainActivity extends Activity {
 
         copy = new Button(this);
         copy.setText("COPY SECURITY REPORT");
+        copy.setTextSize(10);
         copy.setTextColor(white);
         copy.setBackground(shape(Color.rgb(43,60,85), 12, Color.rgb(43,60,85)));
         LinearLayout.LayoutParams cp = params(-1, 50);
@@ -401,7 +402,7 @@ public class MainActivity extends Activity {
     TextView text(String value, int size, int color, boolean bold) {
         TextView t = new TextView(this);
         t.setText(value);
-        t.setTextSize(size);
+        t.setTextSize(10); // TEXT_SIZE_10_FIX
         t.setTextColor(color);
         if (bold) t.setTypeface(null, Typeface.BOLD);
         return t;
