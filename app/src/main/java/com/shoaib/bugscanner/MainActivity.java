@@ -44,6 +44,8 @@ public class MainActivity extends Activity {
         getWindow().setNavigationBarColor(bg);
 
         ScrollView scroll = new ScrollView(this);
+        scroll.setFillViewport(true);
+        scroll.setVerticalScrollBarEnabled(true);
         scroll.setBackgroundColor(bg);
 
         root = new LinearLayout(this);
