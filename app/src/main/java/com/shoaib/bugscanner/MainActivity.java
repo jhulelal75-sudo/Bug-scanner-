@@ -23,6 +23,7 @@ import java.util.concurrent.*;
 import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends Activity {
+    // VISUAL_CLARITY_FIX
 
     int bg = Color.rgb(9, 15, 29);
     int card = Color.rgb(20, 30, 49);
@@ -79,14 +80,21 @@ public class MainActivity extends Activity {
         input.setHintTextColor(muted);
         input.setHint("Enter domain e.g. example.com");
         input.setTextSize(16);
+        input.setGravity(Gravity.CENTER_VERTICAL);
+        input.setMinHeight(dp(60));
+        input.setIncludeFontPadding(true);
+        input.setHint("Enter website domain, e.g. example.com");
         input.setPadding(dp(15), dp(12), dp(15), dp(12));
-        input.setBackground(shape(card, 12, Color.rgb(50,65,85)));
+        input.setBackground(shape(card, 12, Color.rgb(85,105,135)));
         root.addView(input, params(-1, 55));
 
         scan = new Button(this);
         scan.setText("START FULL SECURITY SCAN");
         scan.setTextColor(bg);
-        scan.setTextSize(14);
+        scan.setTextSize(15);
+        scan.setAllCaps(false);
+        scan.setMinHeight(dp(58));
+        scan.setGravity(Gravity.CENTER);
         scan.setTypeface(null, Typeface.BOLD);
         scan.setBackground(shape(accent, 12, accent));
         LinearLayout.LayoutParams sp = params(-1, 55);
@@ -110,7 +118,12 @@ public class MainActivity extends Activity {
 
         for (String s : modules) {
             TextView item = text("✓   " + s, 13, white, true);
-            item.setPadding(dp(14), dp(13), dp(10), dp(13));
+            item.setPadding(dp(18), dp(18), dp(14), dp(18));
+            item.setGravity(Gravity.CENTER_VERTICAL);
+            item.setMinHeight(dp(68));
+            item.setTextSize(14);
+            item.setIncludeFontPadding(true);
+            item.setBackground(shape(card, 12, Color.rgb(55,75,100)));
             item.setBackground(shape(card, 10, card));
             LinearLayout.LayoutParams p = params(-1, -2);
             p.topMargin = dp(7);
